@@ -1,30 +1,32 @@
 #pragma once
-
+#define safedo(a, E) E = (a != 0)
+int E;
 typedef struct Nod
 {
     char DataType[24];
     void* Data_P;
 } Node;
 
-
 typedef struct  BT
-{
+{   
     Node Leaf;
-    Node* Lbranch;
-    Node* Rbranch;
+    BinaryTree* Lbranch;
+    BinaryTree* Rbranch;
 } BinaryTree;
-
+ 
 typedef struct Ll
-{
+{   
+    LinkedList* Head;
+    LinkedList* Tail;
     Node node;
-    Node* NextNode;
-    Node* PreviousNode;
+    LinkedList* NextNode;
+    LinkedList* PreviousNode;
 
 } LinkedList;
 
 int newBT(BinaryTree* bt ,Node Root);//used to Initialise a tree, returns 0 if success
 
-int newLl(LinkedList* ln, Head);//used to initialise a Linked List, returns 0 if success
+int newLl(LinkedList* ln, Node Head);//used to initialise a Linked List, returns 0 if success
 
 int addLeaf(Node Leaf, Node* Parent);//Add a leaf to a tree, given it's parents, returns 0 if success
 
@@ -41,4 +43,6 @@ int freeTree(BinaryTree* bt);//frees the tree from memory
 int freeList(LinkedList* ll);//frees the linked list from memory
 
 int freeNode(Node* n);//frees node from memory
+
+int copyNode(Node* node, Node n);//copies a node's content into another one (would be like Node1 = Node2)
 
