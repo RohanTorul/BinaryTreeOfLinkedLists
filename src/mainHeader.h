@@ -36,3 +36,9 @@ int pushList(Node node);//Inserts a node as a new head of the Linked list (Like 
 
 int pullList(Node node);////removes the head of the linked list (Like in a stack structure), returns 0 if success
 
+int freeTree(BinaryTree* bt);
+
+int freeList(LinkedList* ll);
+
+int freeNode(Node* n);
+
