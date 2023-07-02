@@ -9,9 +9,9 @@ typedef struct Nod
 
 typedef struct  BT
 {
-    char DataType[24];
-    void* ChildL;
-    void* ChildR;
+    Node Leaf;
+    Node* Lbranch;
+    Node* Rbranch;
 } BinaryTree;
 
 typedef struct Ll
@@ -21,3 +21,5 @@ typedef struct Ll
     Node PreviousNode;
 
 } LinkedList;
+
+int newBT()
