@@ -34,11 +34,11 @@ int dequeueList(Node node);//removes the head of the linked list (Like in a queu
 
 int pushList(Node node);//Inserts a node as a new head of the Linked list (Like a stack structure), returns 0 if success
 
-int pullList(Node node);////removes the head of the linked list (Like in a stack structure), returns 0 if success
+int pullList(Node node);//removes the head of the linked list (Like in a stack structure), returns 0 if success
 
-int freeTree(BinaryTree* bt);
+int freeTree(BinaryTree* bt);//frees the tree from memory
 
-int freeList(LinkedList* ll);
+int freeList(LinkedList* ll);// frees the linked list from memory
 
-int freeNode(Node* n);
+int freeNode(Node* n);// frees node from memory
 
