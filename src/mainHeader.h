@@ -18,8 +18,18 @@ typedef struct Ll
 {
     Node node;
     Node* NextNode;
-    Node PreviousNode;
+    Node* PreviousNode;
 
 } LinkedList;
 
-int newBT()
+int newBT(Node Root);
+
+int newLl(Node Head);
+
+int addLeaf(Node Leaf, Node* Parent);
+
+int queueNode(Node node);
+
+int dequeueNode(Node node);
+
+
