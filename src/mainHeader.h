@@ -22,9 +22,9 @@ typedef struct Ll
 
 } LinkedList;
 
-int newBT(Node Root);//used to Initialise a tree, returns 0 if success
+int newBT(BinaryTree* bt ,Node Root);//used to Initialise a tree, returns 0 if success
 
-int newLl(Node Head);//used to initialise a Linked List, returns 0 if success
+int newLl(LinkedList* ln, Head);//used to initialise a Linked List, returns 0 if success
 
 int addLeaf(Node Leaf, Node* Parent);//Add a leaf to a tree, given it's parents, returns 0 if success
 
