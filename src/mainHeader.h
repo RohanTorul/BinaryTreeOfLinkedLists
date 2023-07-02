@@ -22,14 +22,17 @@ typedef struct Ll
 
 } LinkedList;
 
-int newBT(Node Root);
+int newBT(Node Root);//used to Initialise a tree, returns 0 if success
 
-int newLl(Node Head);
+int newLl(Node Head);//used to initialise a Linked List, returns 0 if success
 
-int addLeaf(Node Leaf, Node* Parent);
+int addLeaf(Node Leaf, Node* Parent);//Add a leaf to a tree, given it's parents, returns 0 if success
 
-int queueNode(Node node);
+int queueList(Node node);//Appends a node to the linked list (like in a queue structure), returns 0 if success
 
-int dequeueNode(Node node);
+int dequeueList(Node node);//removes the head of the linked list (Like in a queue structure), returns 0 if success
 
+int pushList(Node node);//Inserts a node as a new head of the Linked list (Like a stack structure), returns 0 if success
+
+int pullList(Node node);////removes the head of the linked list (Like in a stack structure), returns 0 if success
 
