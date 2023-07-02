@@ -38,7 +38,7 @@ int pullList(Node node);//removes the head of the linked list (Like in a stack s
 
 int freeTree(BinaryTree* bt);//frees the tree from memory
 
-int freeList(LinkedList* ll);// frees the linked list from memory
+int freeList(LinkedList* ll);//frees the linked list from memory
 
-int freeNode(Node* n);// frees node from memory
+int freeNode(Node* n);//frees node from memory
 
