@@ -12,6 +12,7 @@ typedef struct  BT
     Node Leaf;
     BinaryTree* Lbranch;
     BinaryTree* Rbranch;
+    BinaryTree* Parent;
 } BinaryTree;
  
 typedef struct Ll
