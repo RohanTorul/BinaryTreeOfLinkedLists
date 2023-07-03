@@ -1,14 +1,12 @@
 ﻿#include "mainHeader.h"
 #include <stdio.h>
 
-int copytostring(String *s, String copyvalue)  // copies the value of one string to another string
-{
-    s->length = copyvalue.length;
-    
-    for(int i = 0; i <= (*s).length; i++)
-    {
-
-    }
+int copyToString(String *s, String *copyvalue)  // copies the value of one string to another string
+{   
+    if((*copyvalue).length < 0 ){return -1;}//Because Invalid Length
+    s->length = (*copyvalue).length;
+    s->value = (*copyvalue).value;
+    (*copyvalue).value = NULL;
 }
 
 int newBT(BinaryTree *bt, Node Root) // used to Initialise a tree, returns 0 if success
@@ -22,8 +20,7 @@ int newBT(BinaryTree *bt, Node Root) // used to Initialise a tree, returns 0 if 
         bt->Lbranch = NULL; // No Left child
         bt->Rbranch = NULL; // No right child
         bt->Parent = NULL;  // No parent
-        /*bt->Leaf.DataType = Root.DataType;*/ //Unsafe...
-        //TO DO STRINGSSSSSSSS
+        copyToString(bt->Leaf.Datatype, Root.Datatype);
         bt->Leaf.Data_P = Root.Data_P;
     }
     return 0;

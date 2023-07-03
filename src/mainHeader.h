@@ -1,15 +1,16 @@
 #pragma once
+#include <stdlib.h>
 #define safedo(a, E) E = (a != 0)
 int E;
 typedef struct string
 {
     int length;
-    char value[];
+    char** value;
 } String;
 
 typedef struct Nod
 {
-    String Datatype;
+    String* Datatype;
     void *Data_P;
 } Node;
 
@@ -31,7 +32,7 @@ typedef struct Ll
 
 } LinkedList;
 
-int copytostring(String *s, String copyvalue); // copies the value of one string to another string
+int copyToString(String *s, String* copyvalue); // copies the value of one string to another string
 
 int newBT(BinaryTree *bt, Node Root); // used to Initialise a tree, returns 0 if success
 
