@@ -1,7 +1,8 @@
 #pragma once
-#include <stdlib.h>
+#include <stdlib.h>//tried (not so)hard not to include this...but I need them Malloc
 #define safedo(a, E) E = (a != 0)
 int E;
+
 typedef struct string
 {
     int length;
@@ -33,6 +34,8 @@ typedef struct Ll
 } LinkedList;
 
 int copyToString(String *s, String* copyvalue); // copies the value of one string to another string
+
+int newString(); //creates new String ATTENTION USES MALLOC!
 
 int newBT(BinaryTree *bt, Node Root); // used to Initialise a tree, returns 0 if success
 
