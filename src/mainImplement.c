@@ -11,7 +11,8 @@ int newBT(BinaryTree* bt ,Node Root)//used to Initialise a tree, returns 0 if su
         bt->Parent = NULL;//No parent
         bt->Leaf.DataType = Root.DataType;
         bt->Leaf.Data_P = Root.Data_P;
-    }    
+    }
+    return 0;
 }
 
 int newLl(LinkedList* ln, Node Head)//used to initialise a Linked List, returns 0 if success
