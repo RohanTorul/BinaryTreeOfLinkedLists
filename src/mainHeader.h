@@ -1,6 +1,12 @@
 #pragma once
 #define safedo(a, E) E = (a != 0)
 int E;
+typedef struct string
+{
+    int length;
+    char value[]; 
+}String;
+
 typedef struct Nod
 {
     char DataType[24];
