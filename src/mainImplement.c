@@ -34,16 +34,23 @@ int newLl(LinkedList *ln, Node Head) // used to initialise a Linked List, return
     ln->PreviousNode = NULL;//because it is the root
 }
 
-int addLeaf(Node Leaf, Node *Parent) // Add a leaf to a tree, given it's parents, returns 0 if success
+int addLeaf(BinaryTree *Tree, BinaryTree *leaf) // Add a leaf to a tree, given it's parents, returns 0 if success
 {
+    
 }
 
-int queueList(Node node) // Appends a node to the linked list (like in a queue structure), returns 0 if success
+int queueList(LinkedList *Item, LinkedList *List) // Appends a node to the linked list (like in a queue structure), returns 0 if success
 {
+    (*(*List).Tail)->NextNode = Item;//Appends Item to Linked List
+    (*(*List).Tail)->Tail = Item;//Updates Tail
 }
 
-int dequeueList(Node node) // removes the head of the linked list (Like in a queue structure), returns 0 if success
+int dequeueList(LinkedList *List,Node* node) // removes the head of the linked list (Like in a queue structure), returns 0 if success
 {
+    node->Data_P = (*List).node.Data_P;//Putting head's data into a node.
+    copyToString(node->Datatype,(*List).node.Datatype); //Setting that node's data type specifier.
+
+    (*(*List).Head)->Head = (*(*List).Head)->NextNode;//Updates Head
 }
 
 int pushList(Node node) // Inserts a node as a new head of the Linked list (Like a stack structure), returns 0 if success

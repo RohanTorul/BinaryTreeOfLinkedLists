@@ -34,8 +34,8 @@ typedef struct BT
 
 typedef struct Ll
 {
-    LinkedList *Head;
-    LinkedList *Tail;
+    LinkedList **Head;
+    LinkedList **Tail;
     Node node;
     LinkedList *NextNode;
     LinkedList *PreviousNode;
@@ -50,11 +50,11 @@ int newBT(BinaryTree *bt, Node Root); // used to Initialise a tree, returns 0 if
 
 int newLl(LinkedList *ln, Node Head); // used to initialise a Linked List, returns 0 if success
 
-int addLeaf(Node Leaf, Node *Parent); // Add a leaf to a tree, given it's parents, returns 0 if success
+int addLeaf(BinaryTree *Tree, BinaryTree *leaf); // Add a leaf(a binary tree) to a tree, returns 0 if success
 
-int queueList(Node node); // Appends a node to the linked list (like in a queue structure), returns 0 if success
+int queueList(LinkedList *Item, LinkedList *List); // Appends a node to the linked list (like in a queue structure), returns 0 if success
 
-int dequeueList(Node node); // removes the head of the linked list (Like in a queue structure), returns 0 if success
+int dequeueList(LinkedList *List,Node* node); // removes the head of the linked list (Like in a queue structure), returns 0 if success
 
 int pushList(Node node); // Inserts a node as a new head of the Linked list (Like a stack structure), returns 0 if success
 
