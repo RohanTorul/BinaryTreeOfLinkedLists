@@ -28,6 +28,10 @@ int newBT(BinaryTree *bt, Node Root) // used to Initialise a tree, returns 0 if 
 
 int newLl(LinkedList *ln, Node Head) // used to initialise a Linked List, returns 0 if success
 {
+    ln->Head = Head.Head;//Ik it's wrong
+    ln->Tail = Head.Tail;//this too
+    ln->NexNode = NULL;
+    ln->PreviousNode = NULL;
 }
 
 int addLeaf(Node Leaf, Node *Parent) // Add a leaf to a tree, given it's parents, returns 0 if success
