@@ -8,7 +8,7 @@ struct memUnit{
 };
 struct memeManager{
    int length;
-   struct memUnit** units;
+   struct memUnit* units[1024];
 };
 struct memeManager MEM_MANAGER;
 
