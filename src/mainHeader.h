@@ -2,6 +2,15 @@
 #include <stdlib.h>//tried (not so)hard not to include this...but I need them Malloc
 #define safedo(a, E) E = (a != 0)
 int E;
+struct memUnit{
+   int length;
+   void* Element;
+};
+struct memeManager{
+   int length;
+   struct memUnit** units;
+};
+struct memeManager MEM_MANAGER;
 
 typedef struct string
 {
