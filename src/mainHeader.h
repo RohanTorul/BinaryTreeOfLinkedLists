@@ -56,7 +56,7 @@ int queueList(LinkedList *Item, LinkedList *List); // Appends a node to the link
 
 int dequeueList(LinkedList *List,Node* node); // removes the head of the linked list (Like in a queue structure), returns 0 if success
 
-int pushList(Node node); // Inserts a node as a new head of the Linked list (Like a stack structure), returns 0 if success
+int pushList(LinkedList* Item, LinkedList* List); // Inserts a node as a new head of the Linked list (Like a stack structure), returns 0 if success
 
 int pullList(Node node); // removes the head of the linked list (Like in a stack structure), returns 0 if success
 
