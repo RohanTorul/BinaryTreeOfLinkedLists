@@ -36,7 +36,7 @@ int newLl(LinkedList *ln, Node Head) // used to initialise a Linked List, return
 
 int addLeaf(BinaryTree *Tree, BinaryTree *leaf) // Add a leaf to a tree, given it's parents, returns 0 if success
 {
-    
+    //On Hold...must decide on a very customisable approach...potentially it will involve the use of Function pointers.
 }
 
 int queueList(LinkedList *Item, LinkedList *List) // Appends a node to the linked list (like in a queue structure), returns 0 if success
@@ -59,18 +59,25 @@ int pushList(LinkedList* Item, LInkedList* List) // Inserts a node as a new head
     (*(*List).Head)->Head = Item;//Updates Head
 }
 
-int pullList(Node node) // removes the head of the linked list (Like in a stack structure), returns 0 if success
+int pullList(LinkedList* List, Node* node) // removes the head of the linked list (Like in a stack structure), returns 0 if success
 {
+    node->data_P = (*(*List).Head)->node.Data_P;//Putting Head's data into a node.
+    copyToString(node->DataType, ((*List).Head)->node.DataType);//Setting that node's data type specifier.
+    
+    (*(*List).Head)->Head = (*(*List).Head)->NextNode;//Updates Head
 }
 
 int freeTree(BinaryTree *bt) // frees the tree from memory
 {
+    //IMPLEMENT MEMEMANAGER FIRST
 }
 
 int freeList(LinkedList *ll) // frees the linked list from memory
 {
+    //IMPLEMENT MEMEMANAGER FIRST!, AGAIN!
 }
 
 int freeNode(Node *n) // frees node from memory
 {
+    //IMPLEMENT...YOU KNOW BY NOW XD
 }
