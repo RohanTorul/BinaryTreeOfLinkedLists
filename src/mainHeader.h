@@ -42,6 +42,14 @@ typedef struct Ll
 
 } LinkedList;
 
+//IN CASE I FORGET ADDING IN THE FUNCTION DESCRIPTIONS: ALL INT FUNCTIONS, UNLESS DESCRIED OTHERWISE, WILL RETURN INT FOR SUCESS.
+
+//TENTATIVE MEMEMANAGER FUNCTIONS
+
+int AddUnit(int Size/*In bytes?...IDFK*/, void* p);//Used to Allocate memory, uses the MEM_MANAGER instance
+
+int RemoveUnit(void* p);//I'm sure this will be updated very soon....MAYBE a dictionary will have to be implemented to randomly acecss MemUnits.
+
 int copyToString(String *s, String* copyvalue); // copies the value of one string to another string
 
 int newString(); //creates new String ATTENTION USES MALLOC!
