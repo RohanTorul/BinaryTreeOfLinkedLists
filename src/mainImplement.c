@@ -53,8 +53,10 @@ int dequeueList(LinkedList *List,Node* node) // removes the head of the linked l
     (*(*List).Head)->Head = (*(*List).Head)->NextNode;//Updates Head
 }
 
-int pushList(Node node) // Inserts a node as a new head of the Linked list (Like a stack structure), returns 0 if success
+int pushList(LinkedList* Item, LInkedList* List) // Inserts a node as a new head of the Linked list (Like a stack structure), returns 0 if success
 {
+    (*(*List).Head)->PreviousNode = Item;//Inserts Item to list
+    (*(*List).Head)->Head = Item;//Updates Head
 }
 
 int pullList(Node node) // removes the head of the linked list (Like in a stack structure), returns 0 if success
